@@ -1,13 +1,14 @@
 import algorithms.BubbleSorter
 import algorithms.SelectionSorter
 
-fun main(args: Array<String>) {
+fun main() {
     val bubbleSorter = BubbleSorter()
     val selectionSorter = SelectionSorter()
-
     val unsorted = intArrayOf(4, 9, 2, 18, 124, 82, 127)
 
     printArray(selectionSorter.sort(unsorted.clone()))
+    printArray(bubbleSorter.sort(unsorted.clone()))
+
 }
 
 fun printArray(array: IntArray) {
