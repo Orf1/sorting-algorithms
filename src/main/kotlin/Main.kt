@@ -6,21 +6,6 @@ fun main() {
     val selectionSorter = SelectionSorter()
     val unsorted = intArrayOf(4, 9, 2, 18, 124, 82, 127)
 
-    printArray(selectionSorter.sort(unsorted.clone()))
-    printArray(bubbleSorter.sort(unsorted.clone()))
-
-}
-
-fun printArray(array: IntArray) {
-    val str = StringBuilder()
-    str.append("[")
-    for (i in array.indices) {
-        if(i == array.size-1) {
-            str.append("${array[i]}")
-        } else {
-            str.append("${array[i]}, ")
-        }
-    }
-    str.append("]")
-    println(str)
+    println(selectionSorter.sort(unsorted.clone()).contentToString())
+    println(bubbleSorter.sort(unsorted.clone()).contentToString())
 }
