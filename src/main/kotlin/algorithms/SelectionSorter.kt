@@ -9,10 +9,14 @@ class SelectionSorter {
                     minIndex = j
                 }
             }
-            val temp = arr[minIndex]
-            arr[minIndex] = arr[i]
-            arr[i] = temp
+            swap(arr, minIndex, i)
         }
         return arr.clone()
+    }
+
+    private fun swap(arr: IntArray, i: Int, j: Int) {
+        val temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
     }
 }
